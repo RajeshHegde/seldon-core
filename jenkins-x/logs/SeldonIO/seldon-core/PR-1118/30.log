@@ -1,0 +1,58 @@
+
+Showing logs for build [32mseldonio-seldon-core-pr-1118-li-gdb6t-30[0m stage [32mpython-lint-task[0m and container [32mstep-credential-initializer-kqdnc[0m
+{"level":"warn","ts":1575054216.7598875,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1575054216.7603767,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mseldonio-seldon-core-pr-1118-li-gdb6t-30[0m stage [32mpython-lint-task[0m and container [32mstep-working-dir-initializer-fdwkj[0m
+{"level":"warn","ts":1575054217.7651439,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1575054217.7670588,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32mseldonio-seldon-core-pr-1118-li-gdb6t-30[0m stage [32mpython-lint-task[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mseldonio-seldon-core-pr-1118-li-gdb6t-30[0m stage [32mpython-lint-task[0m and container [32mstep-git-source-seldonio-seldon-core-pr-1118-li-r87vv[0m
+{"level":"warn","ts":1575054223.8944721,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1575054227.1904361,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/SeldonIO/seldon-core.git @ master in path /workspace/source"}
+
+Showing logs for build [32mseldonio-seldon-core-pr-1118-li-gdb6t-30[0m stage [32mpython-lint-task[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:12813060afe345becf68258eea1c80576132e3a6,1118:6464a780411f159fd581815daa5eb96c04a6bc1b
+DEBUG: ran git fetch --unshallow origin 6464a780411f159fd581815daa5eb96c04a6bc1b: 12813060afe345becf68258eea1c80576132e3a6: in 
+DEBUG: ran git checkout master in 
+DEBUG: ran git reset --hard 12813060afe345becf68258eea1c80576132e3a6 in 
+DEBUG: ran clean --force -d . in 
+DEBUG: ran git merge 6464a780411f159fd581815daa5eb96c04a6bc1b in 
+Merged SHA 04127a30453277bf7587440ede895759635cd237 with commit message 'Merge commit '6464a780411f159fd581815daa5eb96c04a6bc1b'' into base branch master
+Merged SHA 6464a780411f159fd581815daa5eb96c04a6bc1b with commit message 'missed this in commit' into base branch master
+Merged SHA b0f400cbe29e96ddd1a5c202ebf8722f726ab8f1 with commit message 'cleanup' into base branch master
+Merged SHA 0202671d8dec00a84b801151043576ba6a4bfdce with commit message 'tests now pass' into base branch master
+Merged SHA 3f15e0bae6b7301c16a75be1f4320b3e07038bae with commit message 'configmap in helm chart' into base branch master
+Merged SHA d72ed50f999ae02cbbee90b6bdb390e61637d8a7 with commit message 'fix initcontainer for non-tf prepack' into base branch master
+Merged SHA 5e26e1a30d7653ac6f1008c210edce6b33aa0973 with commit message 'tensorflow running' into base branch master
+Merged SHA b74d55372ac6fd438948d33f85c715087101b292 with commit message 'start to handle the tfserving image' into base branch master
+Merged SHA 0f64634f4eb6375260bb68bc7860aa8741900ff9 with commit message 'put back test' into base branch master
+Merged SHA 245004f414b53dda11ff2e3e31160a5d1b2637b8 with commit message 'remove other references to constants' into base branch master
+Merged SHA 17520cc47faeec7eb6fe1248f57eb68d8346ae32 with commit message 'able to run this now' into base branch master
+Merged SHA 21e9fc1d3458b8e3ad02cec070aa8c5fac9a43cf with commit message 'add note on what to do next' into base branch master
+Merged SHA 02e8f7b52292bf93425ca493e8c7b16dc889d70a with commit message 'use map and dynamic lookup but will need k8s client' into base branch master
+Merged SHA 4f2e3e639d39a28b2fe3273a879ee02765454c2a with commit message 'initial changes towards configurable prepack' into base branch master
+
+Showing logs for build [32mseldonio-seldon-core-pr-1118-li-gdb6t-30[0m stage [32mpython-lint-task[0m and container [32mstep-python-lint[0m
+make: Entering directory '/workspace/source/python'
+pip install black==19.3b0
+Collecting black==19.3b0
+  Downloading https://files.pythonhosted.org/packages/30/62/cf549544a5fe990bbaeca21e9c419501b2de7a701ab0afb377bc81676600/black-19.3b0-py36-none-any.whl (89kB)
+Collecting toml>=0.9.4
+  Downloading https://files.pythonhosted.org/packages/a2/12/ced7105d2de62fa7c8fb5fce92cc4ce66b57c95fb875e9318dba7f8c5db0/toml-0.10.0-py2.py3-none-any.whl
+Collecting click>=6.5
+  Downloading https://files.pythonhosted.org/packages/fa/37/45185cb5abbc30d7257104c434fe0b07e5a195a6847506c074527aa599ec/Click-7.0-py2.py3-none-any.whl (81kB)
+Collecting appdirs
+  Downloading https://files.pythonhosted.org/packages/56/eb/810e700ed1349edde4cbdc1b2a21e28cdf115f9faf263f6bbf8447c1abf3/appdirs-1.4.3-py2.py3-none-any.whl
+Collecting attrs>=18.1.0
+  Downloading https://files.pythonhosted.org/packages/a2/db/4313ab3be961f7a763066401fb77f7748373b6094076ae2bda2806988af6/attrs-19.3.0-py2.py3-none-any.whl
+Installing collected packages: toml, click, appdirs, attrs, black
+Successfully installed appdirs-1.4.3 attrs-19.3.0 black-19.3b0 click-7.0 toml-0.10.0
+black \
+	--check ./ ../testing \
+	--exclude "(testing/scripts/proto|seldon_core/proto/|.eggs|.tox)"
+All done! ✨ 🍰 ✨
+49 files would be left unchanged.
+make: Leaving directory '/workspace/source/python'
